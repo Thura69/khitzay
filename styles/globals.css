@@ -1,3 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 html,
 body {
   padding: 0;
@@ -13,14 +19,28 @@ a {
 
 * {
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.4s linear;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+.mobile_menu{
+transform: translateX(-100%);
+}
+.mobile_menu.active{
+  transform: translateX(0);
+}
+.wrapper{
+display: none;
+}
+.wrapper.active{
+display:initial;
+}
+.mobile_filter{
+  transform: translateX(-100%);
+}
+.mobile_filter.active{
+  transform: translateX(0);
+}
+*:focus{
+  outline: none;
 }
